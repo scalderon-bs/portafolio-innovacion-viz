@@ -6,11 +6,10 @@
       "id": "embudoBurbujas",
       "name": "Embudo de Innovación",
       "description": "Embudo con burbujas por proyecto dentro de cada etapa",
-      "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAE0lEQVR42mNk+M9QzcDAwMAECAQAJwYCAqZlL0kAAAAASUVORK5CYII=",
       "resource": {
-        "js": "viz.js",
-        "css": "viz.css",
-        "config": "config.json"
+        "js": "https://scalderon-bs.github.io/portafolio-innovacion-viz/viz.js",
+        "css": "https://scalderon-bs.github.io/portafolio-innovacion-viz/viz.css",
+        "config": "https://scalderon-bs.github.io/portafolio-innovacion-viz/config.json"
       }
     }
   ],
