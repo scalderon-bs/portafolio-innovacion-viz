@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Portafolio de Innovación - Botero Soto</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="topbar">
+    <img src="assets/logo.png" alt="Botero Soto" class="logo">
+    <div class="title-banner">PORTAFOLIO INNOVACIÓN</div>
+  </header>
+
+  <div class="filters" id="filters">
+    <div class="filter">
+      <label>Sprint</label>
+      <select id="f-sprint"><option value="">Todos</option></select>
+    </div>
+    <div class="filter">
+      <label>Etapa</label>
+      <select id="f-etapa"><option value="">Todas</option></select>
+    </div>
+    <div class="filter">
+      <label>Proyecto</label>
+      <select id="f-proyecto"><option value="">Todos</option></select>
+    </div>
+    <div class="filter">
+      <label>Estado</label>
+      <select id="f-estado"><option value="">Todos</option></select>
+    </div>
+    <div class="filter">
+      <label>Área / Cliente</label>
+      <select id="f-area"><option value="">Todas</option></select>
+    </div>
+  </div>
+
+  <section class="kpi-row">
+    <div class="card kpi">
+      <div class="kpi-label">Cantidad Proyectos</div>
+      <div class="kpi-value" id="kpi-cantidad">-</div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Cantidad Proyectos Finalizados</div>
+      <div class="kpi-value" id="kpi-finalizados">-</div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Inversión total</div>
+      <div class="kpi-value" id="kpi-inversion">-</div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Impacto económico</div>
+      <div class="kpi-value" id="kpi-impacto">-</div>
+    </div>
+  </section>
+
+  <section class="row row-funnel-score">
+    <div class="card funnel-card">
+      <div class="card-title">Etapa de proyectos</div>
+      <div id="embudo-root" class="embudo-container"></div>
+    </div>
+    <div class="card score-card">
+      <div class="card-title">Proyectos por Score de Priorización</div>
+      <div class="table-wrap">
+        <table id="score-table">
+          <thead>
+            <tr id="score-table-head"></tr>
+          </thead>
+          <tbody id="score-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-avance">
+    <div class="card">
+      <div class="card-title">Avance proyectado vs real</div>
+      <div id="avance-root" class="chart-root"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Desviación de avance</div>
+      <div id="desviacion-root" class="chart-root"></div>
+    </div>
+    <div class="donut-stack">
+      <div class="card donut-card">
+        <div class="card-title">Tipo de impacto</div>
+        <div id="donut-tipo" class="donut-root"></div>
+      </div>
+      <div class="card donut-card">
+        <div class="card-title">Área / Cliente</div>
+        <div id="donut-area" class="donut-root"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-bottom">
+    <div class="card">
+      <div class="card-title">Inversión vs beneficio neto</div>
+      <div class="card-subtitle">Comparación de la inversión total y el beneficio neto esperado por proyecto.</div>
+      <div id="invbenef-root" class="chart-root"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">ROI vs Payback</div>
+      <div id="scatter-root" class="chart-root"></div>
+    </div>
+  </section>
+
+  <div class="footer-note" id="footer-note"></div>
+</div>
+
+<div class="tooltip" id="tooltip" style="display:none;"></div>
+
+<!-- Datos en vivo: Historicos + Matriz de Score, publicados como CSV desde el Sheet. -->
+<script src="data.js"></script>
+<script src="funnel.js"></script>
+<script src="charts.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

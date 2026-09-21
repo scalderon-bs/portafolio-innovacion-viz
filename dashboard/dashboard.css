@@ -1,0 +1,240 @@
+:root {
+  --bg: #eef1f4;
+  --card-bg: #ffffff;
+  --text: #2c3542;
+  --text-muted: #6b7683;
+  --border-radius: 14px;
+  --shadow: 0 1px 3px rgba(20, 30, 40, 0.08), 0 1px 2px rgba(20, 30, 40, 0.06);
+  --accent: #2f6fed;
+  --blue: #4F8FD6;
+  --green: #3AA876;
+  --orange: #F3C94F;
+  --purple: #8A6FD8;
+  --red: #E2645A;
+  --gray: #A9B6C0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px 10px;
+  box-shadow: var(--shadow);
+}
+
+.title-banner {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+
+.filter select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.kpi { text-align: center; }
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.kpi-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.row {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.row-funnel-score {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.row-avance {
+  grid-template-columns: 1fr 1fr 0.65fr;
+}
+
+.donut-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.donut-card { flex: 1; display: flex; flex-direction: column; }
+
+.donut-root { flex: 1; min-height: 120px; }
+
+.row-bottom {
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.embudo-container {
+  width: 100%;
+  min-height: 300px;
+}
+
+.embudo-svg { width: 100%; height: 100%; display: block; }
+
+.funnel-shape { fill: #eef2f6; stroke: #d7dee4; stroke-width: 1.5; }
+.stage-divider { stroke: #e08a3c; stroke-width: 2; }
+.stage-label { font-size: 12px; font-weight: 600; fill: #495765; text-anchor: middle; }
+.bubble { stroke: rgba(0,0,0,0.12); stroke-width: 1; cursor: pointer; transition: opacity 0.1s ease; }
+.bubble:hover { opacity: 0.85; }
+
+.table-wrap { max-height: 380px; overflow-y: auto; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  text-align: left;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid #eef1f4;
+  padding: 6px 8px;
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+}
+tbody td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #f2f4f6;
+}
+tbody tr:hover { background: #f7f9fb; }
+
+.score-badge {
+  display: inline-block;
+  min-width: 34px;
+  text-align: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 12px;
+}
+
+.chart-root { width: 100%; min-height: 220px; }
+
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: #173047;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+
+.footer-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 8px;
+}
+
+@media (max-width: 1100px) {
+  .row-funnel-score, .row-avance, .row-bottom, .kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
