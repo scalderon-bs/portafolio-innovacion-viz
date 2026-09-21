@@ -1,0 +1,17 @@
+{
+  "name": "Embudo de Innovación - Botero Soto",
+  "description": "Embudo de innovación con burbujas por proyecto (tamaño = beneficio ajustado por riesgo, color = etapa)",
+  "components": [
+    {
+      "id": "embudoBurbujas",
+      "name": "Embudo de Innovación",
+      "description": "Embudo con burbujas por proyecto dentro de cada etapa",
+      "resource": {
+        "js": "viz.js",
+        "css": "viz.css",
+        "config": "config.json"
+      }
+    }
+  ],
+  "organization": "Botero Soto"
+}
