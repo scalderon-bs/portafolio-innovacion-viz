@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "id": "datos",
+      "label": "Datos",
+      "elements": [
+        {
+          "id": "proyecto",
+          "type": "DIMENSION",
+          "label": "Proyecto",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "etapa",
+          "type": "DIMENSION",
+          "label": "Etapa",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "beneficio",
+          "type": "METRIC",
+          "label": "Beneficio ajustado por riesgo",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": []
+}
